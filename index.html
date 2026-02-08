@@ -23,7 +23,7 @@ body{
   padding:12px;
 }
 
-/* Title */
+/* TITLE — ALWAYS VISIBLE */
 #title{
   font-size:1.6rem;
   font-weight:bold;
@@ -54,7 +54,7 @@ body{
   position:absolute;
 }
 
-/* Final message */
+/* Main constant message */
 #finalMsg{
   display:none;
   font-size:2rem;
@@ -67,7 +67,7 @@ body{
   margin-top:20px;
 }
 
-/* Emoji & photo rain */
+/* Emoji & photo fall */
 .fall{
   position:fixed;
   top:-80px;
@@ -106,15 +106,15 @@ body{
 <audio id="song" src="song.mp3" loop></audio>
 
 <script>
-/* NO button running automatically forever */
+/* NO button automatic running forever */
 const noBtn = document.getElementById("noBtn");
 
 setInterval(()=>{
   noBtn.style.left=Math.random()*70+"vw";
   noBtn.style.top=Math.random()*70+"vh";
-},300); // every 0.3 sec
+},300); // move every 0.3 sec
 
-/* YES click */
+/* YES button clicked */
 function acceptLove(){
   document.getElementById("options").style.display="none";
   document.getElementById("finalMsg").style.display="block";
